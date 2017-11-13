@@ -1,0 +1,16 @@
+Name: Collin Harmon
+
+Game: Better Run Fast!
+
+Platform: Windows and maybe Mac as well.
+
+Game Style: Side Scroller
+
+Game Description: Run away from Death and avoid obstacles. Don't fall into the abyss!
+
+Assets: http://opengameart.org/ http://kenney.nl/assets
+
+Scripts: https://unity3d.com/learn/resources/downloads
+
+
+url: rijeka.sdsu.edu/collin.harmon/CS583_2D_Game_Harmon_C_Better_Run_Fast
