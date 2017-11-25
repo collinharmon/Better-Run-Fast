@@ -18,5 +18,13 @@ public class CollisionController : MonoBehaviour {
 			Destroy(this.gameObject);
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
+        if(collision.gameObject.tag == "star")
+		{
+			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
+			Destroy(collision.gameObject);
+			PlayerController.starGrab+=2;
+			//TimeScore.scoreCount+=1;
+			//UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
     }
 }

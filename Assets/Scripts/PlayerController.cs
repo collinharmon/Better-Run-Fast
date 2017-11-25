@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+	
 public class PlayerController : MonoBehaviour {
 
 	public int playerSpeed = 10;
@@ -9,14 +11,25 @@ public class PlayerController : MonoBehaviour {
 	public int playerJumpPower = 1250;
 	private float moveX;
 	public bool onGround;
+	private double jumpRate = 0.0;
+    private double lastJump = 0.0;
+	public static int starGrab = 0;
+
 	// Use this for initialization
 	void Start () {
-		
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		PlayerMove();
+		if (Input.GetKey("r"))
+        {
+			starGrab = 0;
+           UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+		   
+        }
+
 	}
 	
 	void PlayerMove(){
@@ -48,8 +61,10 @@ public class PlayerController : MonoBehaviour {
 		transform.localScale = localScale;
 	}
 	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.tag == "ground"){
+		if(col.gameObject.tag == "ground" && Time.time >= jumpRate+lastJump){
+			if(jumpRate == 0) jumpRate+=1.00;
 			onGround = true;
+			lastJump = Time.time;
 		}
 		//if(col.gameObject.tag == "Enemy") Destroy
 	}
