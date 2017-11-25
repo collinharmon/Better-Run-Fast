@@ -51,5 +51,6 @@ public class PlayerController : MonoBehaviour {
 		if(col.gameObject.tag == "ground"){
 			onGround = true;
 		}
+		//if(col.gameObject.tag == "Enemy") Destroy
 	}
 }

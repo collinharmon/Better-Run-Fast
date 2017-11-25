@@ -13,12 +13,14 @@ public class CameraController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
+		//enemy = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		float x = Mathf.Clamp(enemy.transform.position.x, xMin, xMax);
 		float y = Mathf.Clamp(enemy.transform.position.y, yMin, yMax);
-		gameObject.transform.position = new Vector3(x+7, y, gameObject.transform.position.z);
+		gameObject.transform.position = new Vector3(x+8, y, gameObject.transform.position.z);
+		//gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
 	}
 }

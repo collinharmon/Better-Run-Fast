@@ -13,4 +13,9 @@ public class GrimController : MonoBehaviour {
 	void Update () {
 		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2 (5, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 	}
+	void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.tag == "Player"){
+			Destroy(col.gameObject);
+		}
+	}
 }

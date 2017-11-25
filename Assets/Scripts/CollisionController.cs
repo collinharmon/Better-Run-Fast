@@ -12,6 +12,11 @@ public class CollisionController : MonoBehaviour {
 			Destroy(this.gameObject);
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
-
+		if(collision.gameObject.tag == "Enemy")
+        {
+			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
+			Destroy(this.gameObject);
+			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
     }
 }
