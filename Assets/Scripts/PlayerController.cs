@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 	private double jumpRate = 0.0;
     private double lastJump = 0.0;
 	public static int starGrab = 0;
+	public bool roll = false;
 
 	// Use this for initialization
 	void Start () {
@@ -35,7 +36,19 @@ public class PlayerController : MonoBehaviour {
 	void PlayerMove(){
 		//controls
 		moveX = Input.GetAxis("Horizontal");
-		if(Input.GetKey(KeyCode.UpArrow) && onGround ==	 true) Jump();
+		if(Input.GetKey(KeyCode.UpArrow) && onGround == true) Jump();
+		/*if(Input.GetKey(KeyCode.DownArrow) && onGround == true) {
+			double rollLength = Time.time+1.5;
+			int j = 0;
+			roll = true;
+			//while(Time.time < rollLength){
+			//while(j<500){
+				//roll = true;
+				//Debug.Log("hi");
+				//j++;
+			//}
+			//roll = false;
+		}*/
 	
 		//animation
 		//direction
@@ -61,8 +74,8 @@ public class PlayerController : MonoBehaviour {
 		transform.localScale = localScale;
 	}
 	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.tag == "ground" && Time.time >= jumpRate+lastJump){
-			if(jumpRate == 0) jumpRate+=1.00;
+		if((col.gameObject.tag == "ground" || col.gameObject.tag == "platform") && Time.time >= jumpRate+lastJump){
+			if(jumpRate == 0) jumpRate+=0.10;
 			onGround = true;
 			lastJump = Time.time;
 		}

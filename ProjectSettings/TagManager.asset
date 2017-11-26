@@ -8,6 +8,8 @@ TagManager:
   - godie
   - ground
   - star
+  - platform
+  - noground
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - PlayersLayer
   - Grim
   - Platforms
-  - 
+  - harmfulObject
   - 
   - 
   - 

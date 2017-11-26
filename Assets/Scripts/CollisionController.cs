@@ -10,12 +10,14 @@ public class CollisionController : MonoBehaviour {
         {
 			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
 			Destroy(this.gameObject);
+			PlayerController.starGrab=0;
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
 		if(collision.gameObject.tag == "Enemy")
         {
 			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
 			Destroy(this.gameObject);
+			PlayerController.starGrab=0;
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
         if(collision.gameObject.tag == "star")
@@ -26,5 +28,16 @@ public class CollisionController : MonoBehaviour {
 			//TimeScore.scoreCount+=1;
 			//UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
+		///////////////////
+		  
+ 
+    
+ 
+		
+  
+             
     }
+     
+
+
 }
