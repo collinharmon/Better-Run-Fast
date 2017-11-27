@@ -1,0 +1,12 @@
+Clouds: https://opengameart.org/content/2d-clouds
+Bricks: https://opengameart.org/content/seamless-brick-textures
+Stone ball, spikes: https://opengameart.org/content/animated-traps-and-obstacles
+rocks: https://opengameart.org/content/rock-collection
+energy balls: https://opengameart.org/content/energy-ball
+flame tree: https://opengameart.org/content/flame-tree
+ground: https://opengameart.org/content/jungle-dirt-background-connecting-tileset-16x16
+stars: https://opengameart.org/content/star-vector
+
+Songs, Grim Reaper, and person running were original pieces.
+
+Scripts were a mixture of original work, referencing the textbook, referencing stack overflow, and referencing the c# website.

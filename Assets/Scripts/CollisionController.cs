@@ -14,7 +14,7 @@ public class CollisionController : MonoBehaviour {
 			GrimController.occured = false;
 			GrimController.occured2 = false;
 			GrimController.occured3 = false;
-			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+			UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
 		if(collision.gameObject.tag == "Enemy")
         {
@@ -24,7 +24,7 @@ public class CollisionController : MonoBehaviour {
 			GrimController.occured = false;
 			GrimController.occured2 = false;
 			GrimController.occured3 = false;
-			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+			UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
         if(collision.gameObject.tag == "star")
 		{
@@ -33,6 +33,16 @@ public class CollisionController : MonoBehaviour {
 			PlayerController.starGrab+=2;
 			//TimeScore.scoreCount+=1;
 			//UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
+		if(collision.gameObject.tag == "transcend")
+		{
+			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
+			Destroy(this.gameObject);
+			PlayerController.starGrab=0;
+			GrimController.occured = false;
+			GrimController.occured2 = false;
+			GrimController.occured3 = false;
+			UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
 		///////////////////
 		  
