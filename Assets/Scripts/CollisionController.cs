@@ -11,6 +11,9 @@ public class CollisionController : MonoBehaviour {
 			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
 			Destroy(this.gameObject);
 			PlayerController.starGrab=0;
+			GrimController.occured = false;
+			GrimController.occured2 = false;
+			GrimController.occured3 = false;
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
 		if(collision.gameObject.tag == "Enemy")
@@ -18,6 +21,9 @@ public class CollisionController : MonoBehaviour {
 			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
 			Destroy(this.gameObject);
 			PlayerController.starGrab=0;
+			GrimController.occured = false;
+			GrimController.occured2 = false;
+			GrimController.occured3 = false;
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
         if(collision.gameObject.tag == "star")

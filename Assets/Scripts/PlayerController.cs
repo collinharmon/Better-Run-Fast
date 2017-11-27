@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour {
     private double lastJump = 0.0;
 	public static int starGrab = 0;
 	public bool roll = false;
+	public bool playerOccur;
 
 	// Use this for initialization
 	void Start () {
-	
+		playerOccur = false;
 	}
 	
 	// Update is called once per frame
@@ -30,7 +31,10 @@ public class PlayerController : MonoBehaviour {
            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
 		   
         }
-
+		if(TimeScore.scoreCount-starGrab > 69 && playerOccur == false){
+			playerSpeed=13;
+			playerOccur = true;
+		}
 	}
 	
 	void PlayerMove(){
