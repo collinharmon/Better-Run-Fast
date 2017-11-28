@@ -10,7 +10,7 @@ public class CollisionController : MonoBehaviour {
         {
 			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
 			Destroy(this.gameObject);
-			PlayerController.starGrab=0;
+			//PlayerController.starGrab=0;
 			GrimController.occured = false;
 			GrimController.occured2 = false;
 			GrimController.occured3 = false;
@@ -20,7 +20,7 @@ public class CollisionController : MonoBehaviour {
         {
 			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
 			Destroy(this.gameObject);
-			PlayerController.starGrab=0;
+			//PlayerController.starGrab=0;
 			GrimController.occured = false;
 			GrimController.occured2 = false;
 			GrimController.occured3 = false;
@@ -34,15 +34,15 @@ public class CollisionController : MonoBehaviour {
 			//TimeScore.scoreCount+=1;
 			//UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
-		if(collision.gameObject.tag == "transcend")
+		if(collision.gameObject.tag == "finish")
 		{
 			Debug.Log(gameObject.name + " has collided with " + collision.gameObject.name);
 			Destroy(this.gameObject);
-			PlayerController.starGrab=0;
+			//PlayerController.starGrab=0;
 			GrimController.occured = false;
 			GrimController.occured2 = false;
 			GrimController.occured3 = false;
-			UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+			UnityEngine.SceneManagement.SceneManager.LoadScene(4);
         }
 		///////////////////
 		  

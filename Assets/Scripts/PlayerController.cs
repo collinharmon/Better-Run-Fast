@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		starGrab = 0;
 		playerOccur = false;
 	}
 	

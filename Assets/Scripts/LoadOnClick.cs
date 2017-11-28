@@ -9,6 +9,8 @@ public class LoadOnClick : MonoBehaviour {
 		//level is index in build settings of the level we want to load
 		Application.LoadLevel(level);
 	}
-	public void quitGame(){Application.Quit();}
+	public void quitGame(){
+		Application.Quit();
+	}
 
 }

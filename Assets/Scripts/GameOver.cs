@@ -5,16 +5,17 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour {
 
 	public Text finalScore;
+	int star;
     //public static int final = 0;
 	// Use this for initialization
 	void Start () {
-		finalScore.text = TimeScore.scoreCount+ "";
+		finalScore.text = (TimeScore.scoreCount+PlayerController.starGrab) + "";
 		//scoreCount = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		finalScore.text = TimeScore.scoreCount+ "";
+		//star = PlayerController.starGrab;
+		finalScore.text = TimeScore.scoreCount + "";
 	}
 }
